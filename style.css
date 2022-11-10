@@ -1,0 +1,187 @@
+/* ====== General Styles =========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====== Typography=========== */
+html {
+    font-size: 15px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.dark-blue {
+    color: var(--dark-blue);
+}
+
+.grayish-blue {
+    color: var(--grayish-blue);
+}
+
+.gray {
+    color: var(--gray);
+}
+
+/* ====== Colors =========== */
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --gray: hsl(0, 0%, 98%);
+}
+
+.top-cyan{
+    border-top: 4px solid var(--cyan);
+}
+
+.top-blue{
+    border-top: 4px solid var(--blue);
+}
+
+.top-orange{
+    border-top: 4px solid var(--orange);
+}
+
+.top-red{
+    border-top: 4px solid var(--red);
+}
+
+/* ====== Layout =========== */
+body {
+    position: relative;
+    background-color: var(--gray);
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100vh;
+}
+
+section{
+    padding: 10px;
+}
+
+.card-container {
+    margin: 7vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.card{
+    flex:1 0 200px;
+    margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+    .card-container {
+        min-height: 32rem;
+        display: grid;
+        width: 80%;
+        gap: 1.5rem;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card:first-child {
+        grid-row: 2/ span 2;
+        /* supervisor*/
+    }
+
+    .card:nth-child(2) {
+        grid-row: 1 / span 2;
+        /* Team builder*/
+    }
+
+    .card:nth-child(3) {
+        grid-row: 3 / span 2;
+        /* Karma*/
+    }
+
+    .card:nth-child(4) {
+        grid-row: 2 / span 2;
+        /* Calculator*/
+    }
+
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    position: absolute;
+    /* bottom: 10px; */
+    right: 0;
+    left: 0;
+}
+
+/* ====== Component Styles =========== */
+
+
+section h1 {
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+section>h2 {
+    font-size: 2rem;
+}
+
+section>p {
+    font-size: 0.9rem;
+    max-width: 490px;
+    margin: 1rem auto;
+}
+
+.card {
+    padding: min(2rem, 3vw);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem #dedede;
+}
+
+.card img {
+    width: 4rem;
+    align-self: flex-end;
+}
+
+.card p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
