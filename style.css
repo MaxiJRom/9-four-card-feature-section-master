@@ -101,7 +101,7 @@ section{
     .card-container {
         min-height: 32rem;
         display: grid;
-        width: 80%;
+        max-width:1030px;
         gap: 1.5rem;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(3, 1fr);
